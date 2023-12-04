@@ -1,4 +1,3 @@
-# Spring-Boot-Blog-App
 [![Build Status](https://travis-ci.com/coma123/Spring-Boot-Blog-REST-API.svg?branch=development)](https://travis-ci.com/coma123/Spring-Boot-Blog-REST-API) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=coma123_Spring-Boot-Blog-REST-API&metric=alert_status)](https://sonarcloud.io/dashboard?id=coma123_Spring-Boot-Blog-REST-API) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3706/badge)](https://bestpractices.coreinfrastructure.org/projects/3706)
 
 # Spring Boot, MySQL, Spring Security, JWT, JPA, Rest API
@@ -288,30 +287,3 @@ Test them using postman or any other rest client.
 }
 ```
 ![segment](https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJwcDJuOTU4VU1NT21NR090MWJXS0JQd0tFNkcydW51OCIsCiAgInVzZXJJZCI6ICIxMjNibG9nYXBpMTIzIiwKICAiZXZlbnQiOiAiQmxvZ0FwaSB2aXNpdGVkIiwKICAicHJvcGVydGllcyI6IHsKICAgICJzdWJqZWN0IjogIkJsb2dBcGkgdmlzaXRlZCIsCiAgICAiZW1haWwiOiAiY29tcy5zcHVyc0BnbWFpbC5jb20iCiAgfQp9)
-
-
-
-
-https://drive.google.com/file/d/11H17ohWd68OYYdLcJg7Wr-dD6yxDYIwg/view?usp=sharing
-
-### This App has Swagger Enabled
-<img width="959" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/0a7499f3-3667-4d92-8cde-24adcf895734">
-
-### APIs Feature for Post resource
-  <img width="324" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/2e7f459f-7ff6-4c1e-996c-a7aca3fc3d8a">
-  
-  
-### API Features for Category resources
-  <img width="344" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/1246b365-67a8-4be5-835e-8debd42ede29">
-
-### API Features for Comment Resource
-  <img width="589" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/bdf4c367-b1fd-47c0-a073-8cc071cb2ecf">
-
-### API Features for Authenticating and generating POST
-  <img width="233" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/e3764897-b77b-4903-aac3-a08aa8dcc84c">
-
-
-
-
-
-
