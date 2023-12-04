@@ -2,7 +2,7 @@
 
 # Spring Boot, MySQL, Spring Security, JWT, JPA, Rest API
 
-Build Restful CRUD API for a blog using Spring Boot, Mysql, JPA and Hibernate.
+Build Restful CRUD API for a blog using Spring Boot,JWT Autntication Role based, Mysql, JPA and Hibernate.
 
 ## Steps to Setup
 
@@ -14,9 +14,9 @@ git clone https://github.com/coma123/Spring-Boot-Blog-REST-API.git
 
 **2. Create Mysql database**
 ```bash
-create database blogapi
+create database myblog
 ```
-- run `src/main/resources/blogapi.sql`
+- run `src/main/resources/myblog.sql`
 
 **3. Change mysql username and password as per your installation**
 
@@ -45,17 +45,13 @@ The app defines following CRUD APIs.
 
 | Method | Url | Description | Sample Valid Request Body |
 | ------ | --- | ----------- | ------------------------- |
-| GET    | /api/users/me | Get logged in user profile | |
-| GET    | /api/users/{username}/profile | Get user profile by username | |
-| GET    | /api/users/{username}/posts | Get posts created by user | |
-| GET    | /api/users/{username}/albums | Get albums created by user | |
-| GET    | /api/users/checkUsernameAvailability | Check if username is available to register | |
+| GET    | /api/users/ | Get logged in user profile | |
+| GET    | /api/users/{id}/profile | Get user profile by user-id | |
+| GET    | /api/users/{user-id}/posts | Get posts created by user | |
+| GET    | /api/users/{coment-id}/albums | Get albums created by user | |
 | GET    | /api/users/checkEmailAvailability | Check if email is available to register | |
-| POST   | /api/users | Add user (Only for admins) | [JSON](#usercreate) |
-| PUT    | /api/users/{username} | Update user (If profile belongs to logged in user or logged in user is admin) | [JSON](#userupdate) |
-| DELETE | /api/users/{username} | Delete user (For logged in user or admin) | |
-| PUT    | /api/users/{username}/giveAdmin | Give admin role to user (only for admins) | |
-| PUT    | /api/users/{username}/TakeAdmin | Take admin role from user (only for admins) | |
+| PUT    | /api/users/{user-id} | Update user (If profile belongs to logged in user or logged in user is admin) | [JSON](#userupdate) |
+| DELETE | /api/users/{user-id} | Delete user (For logged in user or admin) | |
 | PUT    | /api/users/setOrUpdateInfo | Update user profile (If profile belongs to logged in user or logged in user is admin) | [JSON](#userinfoupdate) |
 
 ### Posts
@@ -77,92 +73,124 @@ The app defines following CRUD APIs.
 | POST   | /api/posts/{postId}/comments | Create new comment for post with id = postId (By logged in user) | [JSON](#commentcreate) |
 | PUT    | /api/posts/{postId}/comments/{id} | Update comment by id if it belongs to post with id = postId (If comment belongs to logged in user or logged in user is admin) | [JSON](#commentupdate) |
 | DELETE | /api/posts/{postId}/comments/{id} | Delete comment by id if it belongs to post with id = postId (If comment belongs to logged in user or logged in user is admin) | |
-
-### Albums
-
-| Method | Url | Description | Sample Valid Request Body |
-| ------ | --- | ----------- | ------------------------- |
-| GET    | /api/albums | Get all albums | |
-| GET    | /api/albums/{id} | Get album by id | |
-| POST   | /api/albums | Create new album (By logged in user) | [JSON](#albumcreate) |
-| PUT    | /api/albums/{id} | Update album (If album belongs to logged in user or logged in user is admin) | [JSON](#albumupdate) |
-| DELETE | /api/albums/{id} | Delete album (If album belongs to logged in user or logged in user is admin) | |
-| GET    | /api/albums/{id}/photos | Get all photos which belongs to album with id = id | |
-
-### Photos
-
-| Method | Url | Description | Sample Valid Request Body |
-| ------ | --- | ----------- | ------------------------- |
-| GET    | /api/photos | Get all photos | |
-| GET    | /api/photos/{id} | Get photo by id | |
-| POST   | /api/photos | Create new photo (By logged in user) | [JSON](#photocreate) |
-| PUT    | /api/photos/{id} | Update photo (If photo belongs to logged in user or logged in user is admin) | [JSON](#photoupdate) |
-| DELETE | /api/photos/{id} | Delete photo (If photo belongs to logged in user or logged in user is admin) | |
-
-### Todos
-
-| Method | Url | Description | Sample Valid Request Body |
-| ------ | --- | ----------- | ------------------------- |
-| GET    | /api/todos | Get all todos which belongs to logged in user | |
-| GET    | /api/todos/{id} | Get todo by id (If todo belongs to logged in user) | |
-| POST   | /api/todos | Create new todo (By logged in user) | [JSON](#todocreate) |
-| PUT    | /api/todos/{id} | Update todo (If todo belongs to logged in user) | [JSON](#todoupdate) |
-| DELETE | /api/todos/{id} | Delete todo (If todo belongs to logged in user) | |
-| PUT    | /api/todos/{id}/complete | Mark todo as complete (If todo belongs to logged in user) | |
-| PUT    | /api/todos/{id}/unComplete | Mark todo as uncomplete (If todo belongs to logged in user) | |
-
 Test them using postman or any other rest client.
 
 ## Sample Valid JSON Request Bodys
-
-##### <a id="signup">Sign Up -> /api/auth/signup</a>
+##### 
+##### <POST /api/auth/signin>Sign Up -> Admin Logs In
 ```json
 {
-	"firstName": "Leanne",
-	"lastName": "Graham",
-	"username": "leanne",
-	"password": "password",
-	"email": "leanne.graham@gmail.com"
+    "usernameOrEmail" : "admin@gmail.com",
+    "password" : "admin"
+}
+```
+```Response
+{
+    "accessToken": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MDE2NzgzMDUsImV4cCI6MTcwMjI4MzEwNX0.XUO9pWdmPirtzBf19bnf1TcBK5d3DJtggqYMdAPpEuKeE0BZpCjtWm5bJPyTFl-H",
+    "tokenType": "Bearer"
+}
+```
+##### <PSOT /api/categories/>Admin Creates Post
+```json
+{
+    "name" : "category-3",
+    "description" : "this is another category-3"
+}
+```
+```Response
+{
+    "id": 4,
+    "name": "category-3",
+    "description": "this is another category-3"
+}
+```
+##### </api/posts>Get All post
+```Response
+{
+    "content": [
+        {
+            "id": 1,
+            "title": "post1",
+            "description": "post1 description",
+            "content": "post1",
+            "comments": [
+                {
+                    "id": 5,
+                    "name": "user5",
+                    "email": "user5@gmail.com",
+                    "body": "i am comment for post 2"
+                },
+                {
+                    "id": 3,
+                    "name": "user3",
+                    "email": "user3@gmail.com",
+                    "body": "i am coment for post 1"
+                }
+            ],
+            "categoryId": 1
+        },
+        {
+            "id": 2,
+            "title": "post with category 2",
+            "description": "only admin with access token can post",
+            "content": "lets check if the admin with the token can post",
+            "comments": [
+                {
+                    "id": 2,
+                    "name": "user2",
+                    "email": "user2@gmail.com",
+                    "body": "i am comment for post 2"
+                },
+                {
+                    "id": 4,
+                    "name": "user4",
+                    "email": "user4@gmail.com",
+                    "body": "i am comment for post 2"
+                }
+            ],
+            "categoryId": 2
+        },
+        {
+            "id": 3,
+            "title": "post2",
+            "description": "post2 is the new description",
+            "content": "post2",
+            "comments": [
+                {
+                    "id": 1,
+                    "name": "user",
+                    "email": "user@gmail.com",
+                    "body": "i am comment for Post1"
+                }
+            ],
+            "categoryId": 2
+        },
+        {
+            "id": 4,
+            "title": "post3",
+            "description": "post3 description",
+            "content": "post3",
+            "comments": [],
+            "categoryId": 2
+        },
+        {
+            "id": 5,
+            "title": "post4",
+            "description": "post4 description",
+            "content": "post4",
+            "comments": [],
+            "categoryId": 2
+        }
+    ],
+    "pageNo": 0,
+    "pageSize": 10,
+    "totalElements": 5,
+    "totalPages": 1,
+    "last": true
 }
 ```
 
-##### <a id="signin">Log In -> /api/auth/signin</a>
-```json
-{
-	"usernameOrEmail": "leanne",
-	"password": "password"
-}
-```
-
-##### <a id="usercreate">Create User -> /api/users</a>
-```json
-{
-	"firstName": "Ervin",
-	"lastName": "Howell",
-	"username": "ervin",
-	"password": "password",
-	"email": "ervin.howell@gmail.com",
-	"address": {
-		"street": "Victor Plains",
-		"suite": "Suite 879",
-		"city": "Wisokyburgh",
-		"zipcode": "90566-7771",
-		"geo": {
-			"lat": "-43.9509",
-			"lng": "-34.4618"
-		}
-	},
-	"phone": "010-692-6593 x09125",
-	"website": "http://erwinhowell.com",
-	"company": {
-		"name": "Deckow-Crist",
-		"catchPhrase": "Proactive didactic contingency",
-		"bs": "synergize scalable supply-chains"
-	}
-}
-```
-
-##### <a id="userupdate">Update User -> /api/users/{username}</a>
+##### </api/posts>Poste a blog</a>
 ```json
 {
 	"firstName": "Ervin",
