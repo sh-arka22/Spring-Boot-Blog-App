@@ -1,9 +1,10 @@
 # Spring-Boot-Blog-App
-https://drive.google.com/file/d/11H17ohWd68OYYdLcJg7Wr-dD6yxDYIwg/view?usp=sharing
-## This App has is Swagger Enabled
-<img width="959" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/0a7499f3-3667-4d92-8cde-24adcf895734">
+## Full-working video link
 
-## In this Blogging App Admin can create a post and User with JWT Token can comment on that post and can delete that post;
+# https://drive.google.com/file/d/11H17ohWd68OYYdLcJg7Wr-dD6yxDYIwg/view?usp=sharing
+
+### This App has Swagger Enabled
+<img width="959" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/0a7499f3-3667-4d92-8cde-24adcf895734">
 
 ### APIs Feature for Post resource
   <img width="324" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/2e7f459f-7ff6-4c1e-996c-a7aca3fc3d8a">
