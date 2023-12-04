@@ -84,7 +84,8 @@ Test them using postman or any other rest client.
     "password" : "admin"
 }
 ```
-```Response
+Response
+```
 {
     "accessToken": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MDE2NzgzMDUsImV4cCI6MTcwMjI4MzEwNX0.XUO9pWdmPirtzBf19bnf1TcBK5d3DJtggqYMdAPpEuKeE0BZpCjtWm5bJPyTFl-H",
     "tokenType": "Bearer"
@@ -97,7 +98,8 @@ Test them using postman or any other rest client.
     "description" : "this is another category-3"
 }
 ```
-```Response
+Response
+```
 {
     "id": 4,
     "name": "category-3",
@@ -105,7 +107,8 @@ Test them using postman or any other rest client.
 }
 ```
 ##### </api/posts>Get All post
-```Response
+Response
+```
 {
     "content": [
         {
@@ -188,130 +191,5 @@ Test them using postman or any other rest client.
     "totalPages": 1,
     "last": true
 }
-```
-
-##### </api/posts>Poste a blog</a>
-```json
-{
-	"firstName": "Ervin",
-	"lastName": "Howell",
-	"username": "ervin",
-	"password": "updatedpassword",
-	"email": "ervin.howell@gmail.com",
-	"address": {
-		"street": "Victor Plains",
-		"suite": "Suite 879",
-		"city": "Wisokyburgh",
-		"zipcode": "90566-7771",
-		"geo": {
-			"lat": "-43.9509",
-			"lng": "-34.4618"
-		}
-	},
-	"phone": "010-692-6593 x09125",
-	"website": "http://erwinhowell.com",
-	"company": {
-		"name": "Deckow-Crist",
-		"catchPhrase": "Proactive didactic contingency",
-		"bs": "synergize scalable supply-chains"
-	}
-}
-```
-
-##### <a id="userinfoupdate">Update User Profile -> /api/users/setOrUpdateInfo</a>
-```json
-{
-	"street": "Douglas Extension",
-	"suite": "Suite 847",
-	"city": "McKenziehaven",
-	"zipcode": "59590-4157",
-	"companyName": "Romaguera-Jacobson",
-	"catchPhrase": "Face to face bifurcated interface",
-	"bs": "e-enable strategic applications",
-	"website": "http://ramiro.info",
-	"phone": "1-463-123-4447",
-	"lat": "-68.6102",
-	"lng": "-47.0653"
-}
-```
-
-##### <a id="postcreate">Create Post -> /api/posts</a>
-```json
-{
-	"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-	"body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
-}
-```
-
-##### <a id="postupdate">Update Post -> /api/posts/{id}</a>
-```json
-{
-	"title": "UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED",
-	"body": "UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED "
-}
-```
-
-##### <a id="commentcreate">Create Comment -> /api/posts/{postId}/comments</a>
-```json
-{
-	"body": "laudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"
-}
-```
-
-##### <a id="commentupdate">Update Comment -> /api/posts/{postId}/comments/{id}</a>
-```json
-{
-	"body": "UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED UPDATED "
-}
-```
-
-##### <a id="albumcreate">Create Album -> /api/albums</a>
-```json
-{
-	"title": "quidem molestiae enim"
-}
-```
-
-##### <a id="albumupdate">Update Album -> /api/albums/{id}</a>
-```json
-{
-	"title": "quidem molestiae enim UPDATED"
-}
-```
-
-##### <a id="photocreate">Create Photo -> /api/photos</a>
-```json
-{
-	"title": "accusamus beatae ad facilis cum similique qui sunt",
-	"url": "https://via.placeholder.com/600/92c952",
-	"thumbnailUrl": "https://via.placeholder.com/150/92c952",
-	"albumId": 2
-}
-```
-
-##### <a id="photoupdate">Update Photo -> /api/photos{id}</a>
-```json
-{
-	"title": "accusamus beatae ad facilis ",
-	"url": "https://via.placeholder.com/600/771796",
-	"thumbnailUrl": "https://via.placeholder.com/150/771796",
-	"albumId": 4
-}
-```
-
-##### <a id="todocreate">Create Todo -> /api/todos</a>
-```json
-{
-	"title": "delectus aut autem",
-	"completed": false
-}
-```
-
-##### <a id="todoupdate">Update Todo -> /api/todos{id}</a>
-```json
-{
-	"title": "delectus aut autem Updated",
-	"completed": true
-}
-```
+````
 ![segment](https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJwcDJuOTU4VU1NT21NR090MWJXS0JQd0tFNkcydW51OCIsCiAgInVzZXJJZCI6ICIxMjNibG9nYXBpMTIzIiwKICAiZXZlbnQiOiAiQmxvZ0FwaSB2aXNpdGVkIiwKICAicHJvcGVydGllcyI6IHsKICAgICJzdWJqZWN0IjogIkJsb2dBcGkgdmlzaXRlZCIsCiAgICAiZW1haWwiOiAiY29tcy5zcHVyc0BnbWFpbC5jb20iCiAgfQp9)
