@@ -193,3 +193,22 @@ Response
 }
 ````
 ![segment](https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJwcDJuOTU4VU1NT21NR090MWJXS0JQd0tFNkcydW51OCIsCiAgInVzZXJJZCI6ICIxMjNibG9nYXBpMTIzIiwKICAiZXZlbnQiOiAiQmxvZ0FwaSB2aXNpdGVkIiwKICAicHJvcGVydGllcyI6IHsKICAgICJzdWJqZWN0IjogIkJsb2dBcGkgdmlzaXRlZCIsCiAgICAiZW1haWwiOiAiY29tcy5zcHVyc0BnbWFpbC5jb20iCiAgfQp9)
+
+### Swagger View
+
+<img width="944" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/73b6a774-7778-4c13-85ea-d400f3d4d09d">
+
+<img width="941" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/616017c5-5e16-401c-af97-54055a8d04c9">
+
+
+<img width="936" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/27482529-d4cc-4fed-be74-d6929170b143">
+
+
+<img width="941" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/dfb3da09-ba58-4e04-a3a8-8e0313806447">
+
+
+<img width="935" alt="image" src="https://github.com/sh-arka22/Spring-Boot-Blog-App/assets/91637787/03ebea47-3dda-4b13-97a9-88b9c45e43cd">
+
+
+
+
