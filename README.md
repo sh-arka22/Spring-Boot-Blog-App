@@ -4,13 +4,13 @@
 
 Build Restful CRUD API for a blog using Spring Boot,JWT Autntication Role based, Mysql, JPA and Hibernate.
 
-## NOTE: ``` In case the cdoenloded code from github is not working I am also sharing the zipped in google-drive``` 
+## NOTE: ``` In case the downloded code from github is not working I am also sharing the zipped folder in google-drive``` 
 ## Steps to Setup
 
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/coma123/Spring-Boot-Blog-REST-API.git
+git clone git@github.com:sh-arka22/Spring-Boot-Blog-App.git
 ```
 
 **2. Create Mysql database**
